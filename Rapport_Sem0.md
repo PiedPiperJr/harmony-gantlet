@@ -1,6 +1,7 @@
 # Rapport Hebdomadaire N°0 : Étude de l'existant et établissement du plan de travail  
 *28/10/2024*
 
+
 ## Introduction
 
 Dans le cadre de la réalisation du projet **Harmony Gloves**, notre équipe a tenu à cerner, pour mieux délimiter le périmètre du travail à abattre, les travaux similaires existants, leurs performances ainsi que la portée du projet. Au terme de cette première semaine, nous avons effectué une étude de l'existant, ainsi que l'établissement de la feuille de route pour la réalisation du projet.
