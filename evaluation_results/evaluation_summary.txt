@@ -1,0 +1,35 @@
+Letter Prediction Models Evaluation Summary
+==================================================
+
+Evaluation performed at: 2025-01-09T02:52:18.751569
+
+
+Model Comparison:
+--------------------
+
+accuracy:
+  Model V1: 0.0385
+  Model V2: 0.1154
+  Difference (V2 - V1): 0.0769
+
+balanced_accuracy:
+  Model V1: 0.0385
+  Model V2: 0.1154
+  Difference (V2 - V1): 0.0769
+
+macro_f1:
+  Model V1: 0.0192
+  Model V2: 0.0641
+  Difference (V2 - V1): 0.0449
+
+cohen_kappa:
+  Model V1: 0.0000
+  Model V2: 0.0800
+  Difference (V2 - V1): 0.0800
+
+Best Performing Model:
+--------------------
+
+accuracy: Model v2
+
+macro_f1: Model v2
