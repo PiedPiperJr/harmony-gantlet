@@ -1,0 +1,55 @@
+{
+  "Dataset": {
+    "Samples": 100,
+    "Sequence Length": 20,
+    "Features": 11
+  },
+  "Architecture": {
+    "Model Type": "Sequential",
+    "Total Layers": 7,
+    "Trainable Parameters": 36922.0,
+    "Non-Trainable Parameters": 0.0
+  },
+  "Performance": {
+    "Loss Function": "categorical_crossentropy",
+    "Optimizer": "Adam",
+    "Learning Rate": 0.0010000000474974513
+  },
+  "Layer Details": [
+    {
+      "Name": "lstm",
+      "Type": "LSTM",
+      "Parameters": 19456
+    },
+    {
+      "Name": "lstm_1",
+      "Type": "LSTM",
+      "Parameters": 12416
+    },
+    {
+      "Name": "dense",
+      "Type": "Dense",
+      "Parameters": 2112
+    },
+    {
+      "Name": "dropout",
+      "Type": "Dropout",
+      "Parameters": 0
+    },
+    {
+      "Name": "dense_1",
+      "Type": "Dense",
+      "Parameters": 2080
+    },
+    {
+      "Name": "dropout_1",
+      "Type": "Dropout",
+      "Parameters": 0
+    },
+    {
+      "Name": "dense_2",
+      "Type": "Dense",
+      "Parameters": 858
+    }
+  ]
+}
