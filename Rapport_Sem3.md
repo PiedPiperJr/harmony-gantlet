@@ -27,9 +27,9 @@ Le **HC-06** est un module Bluetooth utilisé pour établir une communication s�
   - Échange de données sans fil.
   - Intégration dans des systèmes IoT.
 
-![Prototype avec Connexion Bluetooth](Figures/ImagesElectro/ElectroProteus2.PNG)
+![Prototype avec Connexion Bluetooth](/images/ElectroProteus2.PNG)
 
-![Prototype avec Gyroscope](Figures/ImagesElectro/gyr.jpg)
+![Prototype avec Gyroscope](/images/gyr.jpg)
 
 ## Insertion du module dans le montage et difficultés rencontrées
 Une fois le montage réalisé en accord avec la modélisation, après alimentation du microprocesseur, on observe l'ensemble des services envoyés par le module depuis l'API de **web-bluetooth**, d'une part, et via un code de test en Python, d'autre part.
