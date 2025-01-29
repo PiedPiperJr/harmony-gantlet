@@ -1,74 +1,68 @@
-\chapter{Rapport Hebdomadaire N°7 :Test de fonctionnement de Harmony Gloves \\27/01/2025}
+# Rapport Hebdomadaire N°7 : Test de fonctionnement de Harmony Gloves  
+_27/01/2025_
 
+## Introduction
+Au terme de la réalisation du projet **Harmony Gloves**, une série de tests a été menée pour évaluer l’efficacité de l’outil. Différentes approches ont été adoptées afin de valider l’état de chaque fonctionnalité initialement prévue.
 
-\section{Introduction}
-Au terme de la réalisation du projet Harmony Gloves, on a procédé à une série de tests pour s'assurer de l'efficacité de l'outil. On a utilisé diverses approches pour évaluer l'état de chaque fonctionnalité initialement prévue
+## Objectifs
+L’objectif principal de cette semaine était de valider le fonctionnement des fonctionnalités implémentées à travers des tests rigoureux, d’identifier les éventuels bogues ou limitations, et de préparer la transition vers l’étape finale de déploiement.
 
-\section{Objectifs}
+## Activités réalisées
 
-L'objectif principal de cette semaine était de valider le fonctionnement des fonctionnalités implémentées lors des phases de développement à travers des tests rigoureux, d’identifier les éventuels bogues ou limitations, et de préparer la transition vers l'étape finale de déploiement.
+### a) Préparation de l'environnement de test
+- Mise en place des scénarios de test basés sur les spécifications fonctionnelles.
+- Configuration de l’environnement local et des appareils nécessaires (simulateurs Bluetooth, gants connectés, appareils mobiles, etc.).
 
-\section{Activités réalisées}
+### b) Tests unitaires
+Les tests unitaires ont couvert les principales fonctionnalités, notamment :  
+- **Appairage Bluetooth** avec différents appareils.  
+- **Traduction des gestes en texte**, en termes de précision et de rapidité.  
+- **Gestion des erreurs**, telles que :  
+  - Connexion perdue.  
+  - Appareil non détecté.  
 
-\subsection*{a) Préparation de l'environnement de test}
-\begin{itemize}
-    \item Mise en place des scénarios de test basés sur les spécifications fonctionnelles.
-    \item Configuration de l'environnement local et des appareils nécessaires (simulateurs Bluetooth, gants connectés, appareils mobiles, etc.).
-\end{itemize}
+### c) Tests d'intégration
+Les tests d’intégration ont validé les interactions entre différents modules :  
+- **Interface utilisateur et backend** : Gestion de la fluidité et de l’affichage des données.  
+- **Traitement en temps réel des données** transmises par les capteurs Bluetooth.  
 
-\subsection*{b) Tests unitaires}
-\begin{itemize}
-    \item Couverture des principales fonctionnalités, incluant :
-    \begin{itemize}
-        \item Appairage Bluetooth avec différents appareils.
-        \item Traduction des gestes en texte (précision et rapidité).
-        \item Gestion des erreurs (connexion perdue, appareil non détecté, etc.).
-    \end{itemize}
-\end{itemize}
+### d) Tests utilisateurs
+Des séances de tests ont été menées avec un échantillon d’utilisateurs. Ces tests visaient à évaluer :  
+- L’**intuitivité de l’interface utilisateur**.  
+- La **fiabilité et fluidité** de l’expérience globale.  
 
-\subsection*{c) Tests d'intégration}
-\begin{itemize}
-    \item Validation des interactions entre les différents modules :
-    \begin{itemize}
-        \item Interaction entre l'interface utilisateur et le backend.
-        \item Traitement en temps réel des données transmises par les capteurs Bluetooth.
-    \end{itemize}
-\end{itemize}
+## Résultats obtenus
 
-\subsection*{d) Tests utilisateurs} 
-\begin{itemize}
-    \item Séances de tests avec un échantillon d’utilisateurs pour évaluer :
-    \begin{itemize}
-        \item L’intuitivité de l’interface utilisateur.
-        \item La fiabilité et la fluidité de l’expérience globale.
-    \end{itemize}
-\end{itemize}
+### Succès
+- **Appairage réussi** avec 90 % des appareils Bluetooth testés.  
+- **Traduction précise des gestes**, avec un taux de précision de 60 %.  
+- Interface utilisateur **jugée intuitive et facile à utiliser** par les testeurs.  
 
-\section{Résultats obtenus}
+### Problèmes identifiés
+- **Incompatibilité avec certains appareils Bluetooth :**  
+  Les appareils utilisant d’anciennes versions de Bluetooth (avant 4.0) ne sont pas pris en charge. Une documentation utilisateur précisant les appareils compatibles est prévue.  
 
-\subsection*{Succès}
-\begin{itemize}
-    \item Appairage réussi avec 90\% des appareils Bluetooth testés.
-    \item Traduction précise des gestes avec un taux de précision de 60 \%.
-    \item Interface utilisateur bien accueillie par les utilisateurs testeurs, jugée intuitive et facile à utiliser.
-\end{itemize}
+- **Latence dans la traduction des gestes :**  
+  Une latence moyenne de 1 seconde a été constatée. Une optimisation des traitements backend est nécessaire.  
 
-\subsection*{Problèmes identifiés}
-\begin{itemize}
-    \item \textbf{Incompatibilité avec certains appareils Bluetooth :} Les appareils utilisant d'anciennes versions de Bluetooth (avant 4.0) ne sont pas pris en charge. Une solution serait de spécifier les appareils compatibles dans la documentation utilisateur.
-    \item \textbf{Latence dans la traduction des gestes :} Une légère latence (environ 1 seconde) a été constatée lors de la traduction des gestes en texte. Une optimisation du traitement des données au niveau du backend est prévue.
-    \item \textbf{Bogue d’affichage sur certains navigateurs :} Des problèmes d'affichage sur Safari et Edge nécessitent une investigation supplémentaire.(Cause surement due à l'API Web-Bluetooth non supportée par tous les navigateurs)
-\end{itemize}
+- **Bogue d’affichage sur certains navigateurs :**  
+  Safari et Edge présentent des problèmes d’affichage. Cela pourrait être lié au support limité de l’API Web-Bluetooth sur ces navigateurs.  
 
-\section{Prochaines étapes}
-\begin{itemize}
-    \item \textbf{Correction des bogues identifiés :} Résoudre les incompatibilités Bluetooth et optimiser la gestion des données en temps réel. Corriger les problèmes d’affichage sur les navigateurs identifiés.
-    \item \textbf{Tests de performance et robustesse :} Effectuer des tests de charge pour évaluer la performance de l’application sous des conditions d’utilisation intense.
-    \item \textbf{Préparation du déploiement :} Finaliser la documentation technique et utilisateur. Mettre en place un environnement de production stable.
-\end{itemize}
+## Prochaines étapes
+- **Correction des bogues identifiés :**  
+  - Résoudre les incompatibilités Bluetooth.  
+  - Optimiser la gestion des données en temps réel.  
+  - Corriger les problèmes d’affichage sur Safari et Edge.  
 
-\section{Remarques finales}
-La phase de test a permis de valider une grande partie des fonctionnalités tout en identifiant des améliorations nécessaires. Les résultats obtenus sont encourageants, et l’équipe reste confiante pour le lancement prévu dans les délais impartis.
+- **Tests de performance et robustesse :**  
+  Effectuer des tests de charge pour évaluer la performance de l’application en conditions d’utilisation intense.  
 
-\section{Déploiement}
-Le projet correct aurait d'être déployé sur vercel, mais en raison de quelques soucis techniques, cela n'a pas pu se faire.
+- **Préparation du déploiement :**  
+  - Finaliser la documentation technique et utilisateur.  
+  - Mettre en place un environnement de production stable.  
+
+## Remarques finales
+La phase de test a validé une grande partie des fonctionnalités tout en identifiant des axes d’amélioration. Les résultats obtenus sont encourageants, et l’équipe reste confiante quant au respect des délais pour le lancement final.
+
+## Déploiement
+Le projet devait être déployé sur **Vercel**. Cependant, en raison de problèmes techniques, le déploiement n’a pas encore pu être réalisé. Une résolution de ces problèmes est en cours.
