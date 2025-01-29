@@ -43,8 +43,8 @@ Ces solutions offrent des fonctionnalités similaires à celles de **Harmony Glo
 
 #### Croquis
 
-![Alternatives 1 et 2](Figures/ImagesElectro/alt1.jpg)  
-![Alternatives 1 et 2](Figures/ImagesElectro/alt2.jpg)
+![Alternatives 1 et 2](/images/alt1.jpg)  
+![Alternatives 1 et 2](/images/alt2.jpg)
 
 ### Planning et Délais
 
@@ -86,7 +86,7 @@ Ces solutions offrent des fonctionnalités similaires à celles de **Harmony Glo
 
 ### Diagramme de Gantt
 
-![Diagramme de Gantt](Figures/ImagesElectro/gantt.jpg)
+![Diagramme de Gantt](/images/gantt.jpg)
 
 ### Organisation de l'équipe
 
