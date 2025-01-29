@@ -27,10 +27,10 @@ L'application a été structurée autour des pages suivantes :
 Intégration du module Bluetooth via les outils disponibles sur la plateforme.
 
 ## Résultat obtenu
-![Accueil](Figures/ImagesElectro/App1.PNG)  
+![Accueil](/images/App1.PNG)  
 _Figure 1 : Accueil_
 
-![Sign to Text Page](Figures/ImagesElectro/App2.PNG)  
+![Sign to Text Page](/images/App2.PNG)  
 _Figure 2 : Sign to Text Page_
 
 ![Sign to Voice](Figures/ImagesElectro/App3.PNG)  
