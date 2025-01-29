@@ -111,4 +111,32 @@ Cette grille de résultats compare les performances des différentes variations 
 
 #### Interprétation des Métriques
 - **Précision** : Les positions moyennes avec `strategy="mean_distance"` obtiennent la meilleure précision (60 %), car elles combinent les informations temporelles de manière optimale.
-- **Robustesse au Bruit** : Les états
+- **Robustesse au Bruit** : Les états moyens avec `use_normal_law=True` sont plus robustes, car ils pondèrent les états centraux.
+- **Temps d'Inférence** : Les approches par états moyens sont plus rapides, en particulier l'algorithme avec `use_normal_law=True`.
+- **Capture des Variations Temporelles** : Les positions moyennes capturent mieux la dynamique temporelle, ce qui est crucial pour les séries temporelles.
+- **Simplicité** : L'approche par états moyens est la plus simple à implémenter et à comprendre.
+
+## Conclusion
+Les approches par **états moyens** et par **positions moyennes** offrent des performances complémentaires. Les états moyens sont rapides et robustes, mais manquent de capture des variations temporelles. Les positions moyennes offrent une meilleure précision et une capture des dynamiques temporelles, mais sont plus complexes et sensibles aux bruits. Le choix entre les deux dépendra des objectifs spécifiques et des contraintes de performance.
+
+La prochaine étape consistera à intégrer les modèles dans le système global et à tester leur performance dans des conditions réelles. Nous travaillerons également sur l'optimisation du code pour réduire les temps d'inférence et améliorer la robustesse globale.  
+
+# Rapport Hebdomadaire N°5 Part2: Fabrication du gant
+
+## Introduction
+
+Il s'agissait tout simplement de réaliser le montage déjà fonctionnel sur prototype avec notre matériel.
+
+Tout s'est passé sans encombre jusqu'au moment de fixer les composants par soudure entre eux sur le gant. Cette tâche ayant pris la plus grande partie du temps.
+
+![Étape de soudure](/images/soudure.jpg)
+*Étape de soudure*
+
+## Rendu final du gant Harmony Glove
+
+![Gant soudé](/images/gant_soude.jpg)
+*Gant soudé*
+
+![Gant terminé](/images/ElectroFinish.jpg)
+*Gant terminé*
+
