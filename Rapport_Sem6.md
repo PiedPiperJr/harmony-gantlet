@@ -33,16 +33,16 @@ L'application **Harmony Gloves**, conçue pour visualiser la traduction de la la
 En résumé, **Next.js** répond parfaitement aux exigences de rapidité, de gestion des données dynamiques et de visualisation interactive d’Harmony Gloves, tout en offrant une expérience utilisateur optimale.
 
 ## Résultat obtenu
-![Vue menu version web](Figures/ImagesElectro/screenmenu.jpg)  
+![Vue menu version web](/images/screenmenu.jpg)  
 _Figure 1 : Vue menu version web_
 
-![Vue sidebar version web](Figures/ImagesElectro/screensidebar.jpg)  
+![Vue sidebar version web](/images/screensidebar.jpg)  
 _Figure 2 : Vue sidebar version web_
 
-![Vue photo version web](Figures/ImagesElectro/screephoto.jpg)  
+![Vue photo version web](/images/screephoto.jpg)  
 _Figure 3 : Vue photo version web_
 
-![Vue paramètres version web](Figures/ImagesElectro/screensettings.jpg)  
+![Vue paramètres version web](/images/screensettings.jpg)  
 _Figure 4 : Vue paramètres version web_
 
 ## Prochaines étapes
