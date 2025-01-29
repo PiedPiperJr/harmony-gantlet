@@ -10,7 +10,7 @@ Avec l'utilisation de l'Arduino Nano dans Proteus, certains problèmes ont été
 ### Problème de transmission des données analogiques
 Les valeurs des capteurs flex ne transitaient pas du Nano vers le module d'affichage, ce qui entraînait des lectures nulles dans la simulation.
 
-![Afficheur LCD tout au long des tests avec Arduino Nano](Figures/ImagesElectro/AfficheurLCD.PNG)
+![Afficheur LCD tout au long des tests avec Arduino Nano](/images/AfficheurLCD.PNG)
 
 ## Solution Apportée
 Pour pallier ce problème, nous avons décidé de :
@@ -18,14 +18,14 @@ Pour pallier ce problème, nous avons décidé de :
 ### Migration vers l'Arduino Uno
 Le remplacement de l'Arduino Nano par l'Arduino Uno a permis d'améliorer la lecture des signaux analogiques. L’Uno dispose d'un nombre suffisant de broches analogiques pour gérer efficacement les 5 capteurs flex.
 
-![Test de connectivité avec Arduino Uno](Figures/ImagesElectro/ElectroTestSeparé.PNG)
+![Test de connectivité avec Arduino Uno](/images/ElectroTestSeparé.PNG)
 
 ## Résultat Obtenu
 Suite à la mise en œuvre de la solution précédente, des améliorations ont été observées, notamment :
 
 - **Transmission correcte des données analogiques :** les valeurs des capteurs flex sont désormais lues et transmises avec succès.
 
-![Affichage des données analogiques](Figures/ImagesElectro/ElectroTerminal.PNG)
+![Affichage des données analogiques](/images/ElectroTerminal.PNG)
 
 ## Prochaines Etapes
 Suite à cette transition réussie, la prochaine étape consistera à tester la communication sans fil du dispositif à l’aide du module Bluetooth HC-05.
