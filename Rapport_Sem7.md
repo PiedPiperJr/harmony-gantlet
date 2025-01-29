@@ -1,4 +1,4 @@
-# Rapport Hebdomadaire N°7 Partie 1: Implémentation du modèle LSTM pour la classification des lettres (13/01/2025)
+# Rapport Hebdomadaire N°7 Partie 1: Implémentation du modèle LSTM pour la classification des lettres (27/01/2025)
 
 ## Introduction
 
