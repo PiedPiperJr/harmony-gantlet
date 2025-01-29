@@ -17,9 +17,20 @@ type BluetoothDeviceInfo = {
 export default function SignToText() {
   const [connectionStatus, setConnectionStatus] = useState<BluetoothConnectionStatus>('disconnected');
   const [translatedText, setTranslatedText] = useState<string>('Waiting for input...');
-  const [device, setDevice] = useState<BluetoothDevice | null>(null); // BluetoothDevice ici
+  const [device, setDevice] = useState<BluetoothDevice | null>(null); // eslint-disable-line no-console
   const [nearbyDevices, setNearbyDevices] = useState<BluetoothDeviceInfo[]>([]);
+  const [animatedText, setAnimatedText] = useState<string>(''); // Nouvel état pour le texte animé.
+  const wordToAnimate = "SignToText";
 
+  // Fonction pour simuler l'apparition des lettres
+  const animateText = async () => {
+    setAnimatedText(''); // Réinitialise l'état avant de commencer.
+    for (let i = 0; i <= wordToAnimate.length; i++) {
+      setTimeout(() => {
+        setAnimatedText(wordToAnimate.slice(0, i)); // Met à jour l'état avec la partie visible.
+      }, i * 300); // Délai de 300ms entre chaque lettre.
+    }
+  };
   // Fonction pour découvrir les appareils Bluetooth à proximité
   const discoverDevices = async () => {
     try {
@@ -30,7 +41,7 @@ export default function SignToText() {
       setConnectionStatus('pairing');
   
       // Demander à l'utilisateur de choisir un appareil Bluetooth (accepter tous les appareils BLE)
-      const selectedDevice = await navigator.bluetooth.requestDevice({
+      const selectedDevice = await navigator.bluetooth.requestDevice({ // eslint-disable-line no-console
         acceptAllDevices: true, // Accepter tous les appareils Bluetooth Low Energy
         optionalServices: [
               "0000ffe0-0000-1000-8000-00805f9b34fb",
@@ -88,7 +99,9 @@ export default function SignToText() {
   const pairDevice = async (deviceId: string) => {
     try {
       // Sélectionner l'appareil Bluetooth à appairer
-      const selectedDevice = await navigator.bluetooth.requestDevice({
+
+
+      const selectedDevice = await navigator.bluetooth.requestDevice({ // eslint-disable-line no-console
         filters: [{ id: deviceId }]
       });
 
@@ -126,9 +139,18 @@ export default function SignToText() {
         </h1>
 
         <div className="bg-gray-50 p-6 rounded-lg mb-6 min-h-[200px] flex items-center justify-center">
-          <p className="text-xl text-gray-800 text-center">{translatedText}</p>
+          {/* <p className="text-xl text-gray-800 text-center">{translatedText}</p> */}
+          <p className="text-2xl text-blue-500 font-mono">{animatedText}</p>
         </div>
-        <div className='flex flex-row w-full flex-wrap justify-around gap-2'>
+        <div className='flex flex-col w-full md:flex-row justify-around gap-2'>
+        <div className="flex justify-center">
+          <button
+            onClick={animateText}
+            className="flex w-[200px] justify-center items-center p-4 bg-green-600 text-white rounded-lg hover:bg-green-700 transition"
+          >
+            Start traducing
+          </button>
+        </div>
         {/* Affichage des appareils Bluetooth à proximité */}
         {nearbyDevices.length > 0 ? (
           <div className="bg-white rounded-lg shadow-md">
@@ -139,7 +161,7 @@ export default function SignToText() {
                   <span>{device.name}</span>
                   <button
                     onClick={() => pairDevice(device.id)}
-                    className="flex justify-center p-4 w-[250px] bg-primary text-white rounded-lg hover:bg-primary-dark transition"
+                    className="flex justify-center p-4 w-[200px] bg-primary text-white rounded-lg hover:bg-primary-dark transition"
                   >
                     Pair
                   </button>
@@ -148,10 +170,10 @@ export default function SignToText() {
             </ul>
           </div>
         ) : (
-          <div className="text-center">
+          <div className="flex justify-center w-full ">
             <button
               onClick={discoverDevices}
-              className="flex w-[250px] justify-center items-center p-4 bg-primary text-white rounded-lg hover:bg-primary-dark transition"
+              className="flex w-[200px] justify-center items-center p-4 bg-primary text-white rounded-lg hover:bg-primary-dark transition"
             >
               <Bluetooth className="mr-2" />
               Discover Devices
@@ -163,7 +185,7 @@ export default function SignToText() {
           <button
             onClick={stopTranslation}
             disabled={connectionStatus === 'disconnected'}
-            className="flex w-[250px] justify-center items-center p-4 bg-accent text-white rounded-lg hover:bg-accent-dark transition"
+            className="flex w-[200px] justify-center items-center p-4 bg-accent text-white rounded-lg hover:bg-accent-dark transition"
           >
             <StopCircle className="mr-2" />
             Stop

@@ -46,7 +46,7 @@ export default function Settings() {
               onChange={(e) => setLanguage(e.target.value)}
               className="w-full p-3 border border-gray-300 rounded-lg"
             >
-              <option value="default">Default Sign Language</option>
+              <option value="default">Cameroonian Sign Language (CSL)</option>
               <option value="asl">American Sign Language (ASL)</option>
               <option value="bsl">British Sign Language (BSL)</option>
             </select>
