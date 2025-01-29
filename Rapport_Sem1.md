@@ -19,7 +19,7 @@ Les flex sensor et le gyroscope ont été connectés aux broches analogiques de 
 
 ### Prototype sous Proteus Isis
 
-![Prototype sous Proteus](Figures/ImagesElectro/ElectroProjet1.PNG)
+![Prototype sous Proteus](images/ElectroProjet1.PNG)
 
 La simulation a permis de générer des variations analogiques en fonction de la courbure des flex. Ces données ont été correctement transmises au microcontrôleur UNO par l’Arduino NANO, puis affichées sur l’écran LCD.
 
